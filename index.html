@@ -1,155 +1,59 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="icon"
-			href="https://cdn-icons-png.flaticon.com/512/104/104093.png"
-			type="image/png" />
-		<title>Gabriel Brickman Hildingsson</title>
-		<style>
-			body {
-				background-color: #1e1e1e;
-				color: #ffffff;
-				font-family: Arial, sans-serif;
-				font-size: 16px;
-				line-height: 1.5;
-				margin: 0;
-				padding: 0;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				min-height: 100vh;
-			}
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
 
-			#particles-js {
-				position: absolute;
-				width: 99%;
-				height: 99%;
-				background-color: #1e1e1e;
-			}
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
 
-			h1 {
-				font-size: 64px;
-				margin: auto;
-				padding: 20px;
-				text-align: center;
-				z-index: 1;
-			}
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
 
-			.subtitle {
-				font-size: 24px;
-				margin: auto;
-				padding: 0;
-				text-align: center;
-				z-index: 1;
-			}
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
 
-			.icons {
-				display: flex;
-				justify-content: center;
-				margin: 40px 0;
-				padding-bottom: 10px;
-				z-index: 1;
-			}
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
 
-			.icon {
-				margin: 0 20px;
-			}
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="koplista">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-			.icon img {
-				height: 40px;
-				width: 40px;
-			}
-		</style>
-	</head>
-	<body>
-		<div id="particles-js"></div>
-		<h1>
-			Gabriel Brickman Hildingsson <br />
-			<span class="subtitle">Mobile application developer</span>
-		</h1>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
 
-		<div class="icons">
-			<div class="icon">
-				<a href="https://github.com/GabrielHilding">
-					<img
-						src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-						alt="GitHub" />
-				</a>
-			</div>
+  <title>koplista</title>
+  <link rel="manifest" href="manifest.json">
 
-			<div class="icon">
-				<a href="https://www.linkedin.com/in/gabriel-hildingsson/">
-					<img
-						src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-						alt="LinkedIn" />
-				</a>
-			</div>
-		</div>
-		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-		<script>
-			particlesJS('particles-js', {
-				particles: {
-					number: { value: 50, density: { enable: true, value_area: 800 } },
-					color: { value: '#ffffff' },
-					shape: {
-						type: 'circle',
-						stroke: { width: 0, color: '#000000' },
-						polygon: { nb_sides: 5 },
-						image: { src: 'img/github.svg', width: 100, height: 100 },
-					},
-					opacity: {
-						value: 0.5,
-						random: false,
-						anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
-					},
-					size: {
-						value: 3,
-						random: true,
-						anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
-					},
-					line_linked: {
-						enable: true,
-						distance: 150,
-						color: '#ffffff',
-						opacity: 0.4,
-						width: 1,
-					},
-					move: {
-						enable: true,
-						speed: 6,
-						direction: 'none',
-						random: false,
-						straight: false,
-						out_mode: 'out',
-						bounce: false,
-						attract: { enable: false, rotateX: 600, rotateY: 1200 },
-					},
-					interactivity: {
-						detect_on: 'canvas',
-						events: {
-							onhover: { enable: true, mode: 'repulse' },
-							onclick: { enable: true, mode: 'push' },
-							resize: true,
-						},
-						modes: {
-							grab: { distance: 400, line_linked: { opacity: 1 } },
-							bubble: {
-								distance: 400,
-								size: 40,
-								duration: 2,
-								opacity: 8,
-								speed: 3,
-							},
-							repulse: { distance: 200, duration: 0.4 },
-							push: { particles_nb: 4 },
-							remove: { particles_nb: 2 },
-						},
-					},
-					retina_detect: true,
-				},
-			});
-		</script>
-	</body>
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "1331058741";
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
+</head>
+<body>
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+</body>
 </html>
